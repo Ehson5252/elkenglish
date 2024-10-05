@@ -42,7 +42,6 @@ main {
 }
 img {
     width: 450px;
-    margin: 25px 0  0 -300px;
     box-shadow: 0 0 20px #333;
     border-radius:25px;
 }
@@ -54,6 +53,7 @@ h1, h2 {
 
 #button {
     display: flex;
+    flex-wrap: nowrap;
 }
 
 button {
@@ -75,9 +75,7 @@ button:hover {
     font-size: 50px;
     color: rgb(7, 99, 37);
     text-shadow: 0 0 50px #0c0a0a;
-    position: fixed;
-    top: 20%;
-    left: 50%;
+    display: block;
     text-align: center;
 }
 

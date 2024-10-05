@@ -3,7 +3,7 @@ let answer2;
 let answer3;
 let answer4;
 
-// let text1 = document.getElementById("wellDone");
+let text1 = document.getElementById("wellDone");
 let wellDoneText = "Дуруст!!!";
 
 let alg = [
@@ -24,7 +24,6 @@ console.log(
 )
 
 function func1() {
-    if()
     console.log("clicked first button")
     text1.innerText="Нодуруст!!!";
     text1.style.color = "red"
