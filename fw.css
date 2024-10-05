@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -23,7 +28,6 @@ header {
     margin: 0;
 }
 #logo #slang {
-    margin: 0;
     font-size: 20px;
     text-align: end;
     text-shadow: 0 0 4px red;
@@ -44,14 +48,18 @@ img {
 }
 
 h1, h2 {
+    margin-top: 10px;
     text-align: center;
 }
 
+#button {
+    display: flex;
+}
 
 button {
     font-size: 25px;
     padding: 10px;
-    margin: 15px;
+    margin: 10px;
     border-radius: 20px 0;
     transition: 200ms;
 
@@ -76,11 +84,12 @@ button:hover {
 @media screen and (max-width: 480px) {
     main {
         flex-direction: column;
-        gap: 0;
+        gap: 10px;
     }
 
     img {
         margin: 0;
+        width: 95vw;
     }
 }
 
