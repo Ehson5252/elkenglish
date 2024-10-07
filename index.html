@@ -22,15 +22,16 @@
             <div>
                 <h1>What is this?</h1>
                 <h2>(Ин чист?)</h2>
-                <div id="button">
-                    <button id="answer1" onclick="func1()">lotion</button>
-                    <button id="answer2" onclick="func2()">mirror</button>
-                    <button id="answer3" onclick="func3()">glasses</button>
-                    <button id="answer4" onclick="func4()">door</button>
+                <div id="options">
+                    <button class="option" id="answer1" onclick="func1()">lotion</button>
+                    <button class="option" id="answer2" onclick="func2()">mirror</button>
+                    <button class="option" id="answer3" onclick="func3()">glasses</button>
+                    <button class="option" id="answer4" onclick="func4()">door</button>
                 </div>
                 <h1 id="wellDone"></h1>
             </div>
-            <img src="mirror.jpg" alt="A mirror">
+            <img id="img" src="mirror.jpg" alt="A mirror">
+            <button id="next" onclick="nextFunc()">баъдӣ ➡</button>
         </main>
 
         <footer>

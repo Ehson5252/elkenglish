@@ -25,7 +25,6 @@ header {
     font-size: 30px;
     padding-left: 10px;
     text-shadow: 2px 2px 4px blue;
-    margin: 0;
 }
 #logo #slang {
     font-size: 20px;
@@ -44,6 +43,7 @@ img {
     width: 450px;
     box-shadow: 0 0 20px #333;
     border-radius:25px;
+    margin: 20px 0;
 }
 
 h1, h2 {
@@ -51,12 +51,12 @@ h1, h2 {
     text-align: center;
 }
 
-#button {
+#options {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
-button {
+.option {
     font-size: 25px;
     padding: 10px;
     margin: 10px;
@@ -65,10 +65,18 @@ button {
 
 }
 
-button:hover {
+button:active {
     box-shadow: 0 0 20px #333;
-    background-color: rgb(73, 61, 139);
+    background-color: rgb(139, 139, 139);
     transform: scale(1.2) translateY(-8px);
+}
+
+#next {
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0 100px 100px 0;
+    transition: 200ms;
 }
 
 #wellDone {

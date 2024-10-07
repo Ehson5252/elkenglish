@@ -1,7 +1,9 @@
-let answer1;
-let answer2;
+let answer1 = document.getElementById("answer1");
+let answer2 = document.getElementById("answer2");
 let answer3;
 let answer4;
+let img = document.getElementById("img");
+
 
 let text1 = document.getElementById("wellDone");
 let wellDoneText = "Дуруст!!!";
@@ -44,4 +46,10 @@ function func4() {
     console.log("clicked first button")
     text1.style.color = "red"
     text1.innerText="Нодуруст!!!";
+}
+
+
+function nextFunc() {
+    answer2.innerText = "Mouse"
+    img.src = "mouse.jpg"
 }
