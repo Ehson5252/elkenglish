@@ -80,4 +80,5 @@ function nextFunc() {
     answer1.innerText = "mouse"
     img.src = "mouse.jpg"
     theR = "mouse"
+    text1.innerText = "";
 }
