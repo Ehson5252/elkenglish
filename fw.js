@@ -1,55 +1,83 @@
 let answer1 = document.getElementById("answer1");
 let answer2 = document.getElementById("answer2");
-let answer3;
-let answer4;
+let answer3 = document.getElementById("answer3");
+let answer4 = document.getElementById("answer4");
 let img = document.getElementById("img");
-
+let options = document.getElementById("options");
 
 let text1 = document.getElementById("wellDone");
 let wellDoneText = "Дуруст!!!";
 
-let alg = [
-    {
-        item1: "resistor",
-        item2: "capasity"
+let alg = ["mirror", "lotion", "glasses", "apple", "cap", "pen", "spoon"];
+let list = [answer1, answer2, answer3, answer4];
+
+let rightAns = Math.floor(Math.random()*4);
+console.log(rightAns);
+list[rightAns].innerText = alg[0]
+let theR = alg[0];
+alg.splice(0, 1);
+
+
+for(let i=0; i<list.length; i++) {
+    console.log("a", i)
+    if(i !== rightAns) {
+        let rand = Math.floor(Math.random() * alg.length)
+        list[i].innerText = alg[rand];
+        alg.splice(rand, 1);
     }
-]
+}
+
+console.log(answer1.innerText);
 
 
-console.log(
-    alg.map(i => {
-        return {
-            item1a: i.item1,
-            ...i
-        }
-    })
-)
+
+
+// answer1.innerText =  alg[Math.floor(Math.random() * 7)]
+
 
 function func1() {
     console.log("clicked first button")
-    text1.innerText="Нодуруст!!!";
-    text1.style.color = "red"
+    if(list[0].innerText == theR) {
+        text1.innerText=wellDoneText;
+        text1.style.color = "green"
+    } else {
+        text1.innerText="Нодуруст!!!";
+        text1.style.color = "red"
+    }
 }
 
 function func2() {
-    console.log("clicked first button")
-    text1.innerText=wellDoneText;
-    text1.style.color = "green"
+    if(list[1].innerText == theR) {
+        text1.innerText=wellDoneText;
+        text1.style.color = "green"
+    } else {
+        text1.innerText="Нодуруст!!!";
+        text1.style.color = "red"
+    }
 
 }
 function func3() {
-    console.log("clicked first button")
-    text1.style.color = "red"
-    text1.innerText="Нодуруст!!!";
+    if(list[2].innerText == theR) {
+        text1.innerText=wellDoneText;
+        text1.style.color = "green"
+    } else {
+        text1.innerText="Нодуруст!!!";
+        text1.style.color = "red"
+    }
 }
 function func4() {
-    console.log("clicked first button")
-    text1.style.color = "red"
-    text1.innerText="Нодуруст!!!";
+    if(list[3].innerText == theR) {
+        text1.innerText=wellDoneText;
+        text1.style.color = "green"
+    } else {
+        text1.innerText="Нодуруст!!!";
+        text1.style.color = "red"
+    }
 }
 
 
 function nextFunc() {
-    answer2.innerText = "Mouse"
+    answer1.innerText = "mouse"
     img.src = "mouse.jpg"
+    theR = "mouse"
 }
