@@ -1,3 +1,7 @@
+// import words_data from "./modules/words_data.js";
+// console.log(words_data);
+
+
 let answer1 = document.getElementById("answer1");
 let answer2 = document.getElementById("answer2");
 let answer3 = document.getElementById("answer3");
@@ -33,6 +37,8 @@ console.log(answer1.innerText);
 
 
 // answer1.innerText =  alg[Math.floor(Math.random() * 7)]
+
+answer1.addEventListener('click', func1)
 
 
 function func1() {
@@ -78,7 +84,7 @@ function func4() {
 
 function nextFunc() {
     answer1.innerText = "mouse"
-    img.src = "mouse.jpg"
+    img.src = "modules/mouse.jpg"
     theR = "mouse"
     text1.innerText = "";
 }
