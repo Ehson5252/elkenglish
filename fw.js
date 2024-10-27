@@ -1,6 +1,6 @@
 import words_data from "./modules/words_data.js";
 
-
+let topNumsforWords = document.querySelector(".numsForWords")
 let answer1 = document.getElementById("answer1");
 let answer2 = document.getElementById("answer2");
 let answer3 = document.getElementById("answer3");
@@ -8,6 +8,8 @@ let answer4 = document.getElementById("answer4");
 let next = document.getElementById("next");
 let img = document.getElementById("img");
 let comment_text = document.getElementById("wellDone");
+
+let p = topNumsforWords.children
 
 
 let right_comment = "Дуруст!!!";
@@ -20,6 +22,9 @@ let wordsLeft = [...words_data]
 let randomNumOf4;
 let randomNumOfAll;
 let theR;
+let numOfQuestion = 0
+
+p[numOfQuestion].style.transform ="scale(1.2)"
 
 const call1 = () => {
     randomNumOf4 = Math.floor(Math.random()*4);
@@ -50,55 +55,37 @@ call1();
 call2();
 
 
-answer1.addEventListener('click', () => func1());
-answer2.addEventListener('click', () => func2());
-answer3.addEventListener('click', () => func3());
-answer4.addEventListener('click', () => func4());
+answer1.addEventListener('click', () => func(list[0]));
+answer2.addEventListener('click', () => func(list[1]));
+answer3.addEventListener('click', () => func(list[2]));
+answer4.addEventListener('click', () => func(list[3]));
 next.addEventListener('click', () => nextFunc());
 
 
 
 
-function func1() {
+function func(arg) {
     console.log("clicked first button")
-    if(list[0].innerText == theR) {
+    if(arg.innerText == theR) {
         comment_text.innerText=right_comment;
         comment_text.style.color = "green"
+        setTimeout(() => nextFunc(), 700)
+        p[numOfQuestion].style.transform ="scale(1)"
+        p[numOfQuestion].style.background ="green"
+        numOfQuestion++;
+        p[numOfQuestion].style.transform ="scale(1.2)"
+
     } else {
         comment_text.innerText="Нодуруст!!!";
         comment_text.style.color = "red"
+        setTimeout(() => nextFunc(), 700)
+        p[numOfQuestion].style.transform ="scale(1)"
+        p[numOfQuestion].style.background ="red"
+        numOfQuestion++;
+        p[numOfQuestion].style.transform ="scale(1.2)"
     }
 }
 
-function func2() {
-    if(list[1].innerText == theR) {
-        comment_text.innerText=right_comment;
-        comment_text.style.color = "green"
-    } else {
-        comment_text.innerText="Нодуруст!!!";
-        comment_text.style.color = "red"
-    }
-}
-
-function func3() {
-    if(list[2].innerText == theR) {
-        comment_text.innerText=right_comment;
-        comment_text.style.color = "green"
-    } else {
-        comment_text.innerText="Нодуруст!!!";
-        comment_text.style.color = "red"
-    }
-}
-
-function func4() {
-    if(list[3].innerText == theR) {
-        comment_text.innerText=right_comment;
-        comment_text.style.color = "green"
-    } else {
-        comment_text.innerText="Нодуруст!!!";
-        comment_text.style.color = "red"
-    }
-}
 
 let counter = 4;
 
