@@ -17,21 +17,35 @@ header {
     margin: 0;
     background-color: #333;
     color: #fff;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #logo #name {
-    font-size: 30px;
-    padding-left: 10px;
-    text-shadow: 2px 2px 4px blue;
+    width: 40px;
 }
 #logo #slang {
-    font-size: 20px;
-    text-align: end;
+    font-family: 'Segoe Print';
+    font-size: 15px;
+    margin: -8px 0;
+    padding-left: 15px;
     text-shadow: 0 0 4px red;
 }
 
+nav{
+    /* width: 40%; */
+}
+nav ul{
+    display:flex;
+    justify-content: space-between;
+}
+
+li {
+    margin-left: 15px;
+    list-style: none;
+}
 
 
 .numsForWords {
@@ -57,7 +71,7 @@ main {
     align-items: center;
     gap: 100px;
 }
-img {
+#img {
     width: 350px;
     height: 450px;
     object-fit: cover;
