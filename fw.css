@@ -3,6 +3,8 @@
     margin: 0;
 }
 
+/* main color: #2400FF */
+
 body {
     margin: 0;
     padding: 0;
@@ -15,8 +17,8 @@ body {
 header {
     padding: 10px;
     margin: 0;
-    background-color: #333;
-    color: #fff;
+    background-color: #ecebff;
+    color: #2400FF;
     letter-spacing: 2px;
     display: flex;
     justify-content: space-between;
@@ -24,7 +26,7 @@ header {
 }
 
 #logo #name {
-    width: 40px;
+    width: 70px;
 }
 #logo #slang {
     font-family: 'Segoe Print';
