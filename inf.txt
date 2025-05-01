@@ -1,0 +1,4 @@
+Logo 
+font-family: Kaushan Script;
+background-color: #ecebff;
+color: #2400FF;
