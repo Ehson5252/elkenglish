@@ -20,6 +20,10 @@ const words_data = [
         word: "pen",
         img: "assets/pen.jpg"
     },
+    {
+        word: "book",
+        img: "assets/book.jpg"
+    }
 ]
 
 export default words_data ;
