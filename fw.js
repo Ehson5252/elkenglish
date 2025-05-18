@@ -96,7 +96,7 @@ answer1.addEventListener('click', () => func(answers[0]));
 answer2.addEventListener('click', () => func(answers[1]));
 answer3.addEventListener('click', () => func(answers[2]));
 answer4.addEventListener('click', () => func(answers[3]));
-next.addEventListener('click', () => nextFunc());
+// next.addEventListener('click', () => nextFunc());
 
 
 

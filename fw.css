@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    
 }
 
 header {
@@ -33,28 +34,13 @@ nav ul{
     justify-content: space-between;
 }
 
-li {
+nav li {
     margin-left: 15px;
     list-style: none;
 }
 
 
-.indicators {
-    margin: 0 auto;
-    /* width: 80%; */
-    display: flex;
-    justify-content: center;
-}
 
-.indicators p{
-    text-align: center;
-    width: 7vw;
-    font-size: 12px;
-    padding: 5px 0;
-    margin: 5px 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
 
 
 
@@ -66,6 +52,21 @@ main {
     gap: 10px;
 }
 
+.indicators {
+    margin: 0 auto;
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+}
+.indicators p{
+    text-align: center;
+    width: 7vw;
+    font-size: 12px;
+    padding: 5px 0;
+    margin: 5px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 
 h2, h3 {
     margin-top: 7px;
@@ -131,14 +132,37 @@ button:active {
 
 
 
-@media screen and (min-width: 480px) {
+footer {
+    text-align: center;
+    color: #2400FF;
+    background-color: #ecebff;
+    padding: 1%;
+
+    margin-top: auto;
+}
+
+
+
+@media screen and (min-width: 480px) { 
+
+    header {
+    padding: 1% 10%;
+    }
 
     #logo_img {
         width: 90px;
     }
+    
+    nav li {
+        font-size: 22px;
+        margin-left: 22px;
+    }
+
+
 
     main {
         margin-top: 30px;
+        margin-bottom: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -158,11 +182,25 @@ button:active {
 
     #question{
         align-self: end;
+        margin-left: 15%;
     }
+    #question h2 {
+        font-size: 32px;
+    }
+    #question h3 {
+        font-size: 25px;
+    }
+
     #options {
         align-self: start;
+        margin-left: 15%;
 
     }
+    .option {
+        font-size: 25px;
+
+    }
+
     #img_wellDone{
         align-self: center;
         grid-column-start: 2;
@@ -172,22 +210,16 @@ button:active {
 
     #img {
         margin: 0;
-        width: 40vw;
-        height: 40vw;
+        width: 60vh;
+        height: 60vh;
     }
     
     #comment_text {
         align-items: center;
         position: absolute;
         top: 38%;
-        width: 40vw;
+        width: 60vh;
         background-color: #ecebff;
     }
 }
 
-footer {
-    background-color: #ecebff;
-    color: #2400FF;
-    text-align: center;
-    margin-top: auto;
-}
